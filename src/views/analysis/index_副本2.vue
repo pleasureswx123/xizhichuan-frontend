@@ -24,7 +24,7 @@
               <span>分析订单</span>
             </div>
           </template>
-          <div>
+          <div class="demand-analysis-content">
             <DemandAnalysis @demand-created="handleDemandCreated" />
           </div>
         </el-card>
@@ -34,7 +34,7 @@
               <span>订单管理</span>
             </div>
           </template>
-          <div class="demand-analysis-content">
+          <div class="chat-content">
             <DemandOrderList ref="demandOrderListRef" />
           </div>
         </el-card>
@@ -98,7 +98,6 @@ const handleDemandCreated = () => {
   }
   .demand-analysis-content {
     overflow-y: scroll;
-    height: 400px;
   }
 }
 </style>
