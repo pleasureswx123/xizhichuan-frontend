@@ -33,10 +33,6 @@
             <el-icon><ChatDotRound /></el-icon>
             AI 回复
           </el-divider>
-          <div v-if="isOrderData">
-            <!-- 需求订单UI组件 -->
-            <DemandOrderInvoice :order-data="response" />
-          </div>
           <!-- 普通文本回复 -->
           <div class="response-content">
             <p>{{ typeof response === 'object' ? JSON.stringify(response, null, 2) : response }}</p>
@@ -48,6 +44,13 @@
           <el-icon class="is-loading"><Loading /></el-icon>
           <span>AI 正在思考中...</span>
         </div>
+        
+        
+        <!-- 需求订单UI组件 -->
+        <div v-if="orderData.length">
+          <DemandOrderInvoice v-for="item in orderData" :order-data="item" />
+        </div>
+        
       </div>
     </el-card>
   </div>
@@ -66,15 +69,8 @@ const { proxy } = getCurrentInstance()
 // 响应式数据
 const message = ref('')
 const response = ref('')
+const orderData = ref([])
 const loading = ref(false)
-
-// 判断是否为订单数据
-const isOrderData = computed(() => {
-  return response.value &&
-         typeof response.value === 'object' &&
-         response.value.demandInfo &&
-         response.value.productList
-})
 
 // 发送消息
 const sendMessage = async () => {
@@ -131,11 +127,8 @@ const sendMessage = async () => {
           console.log('所有产品添加成功');
 
           // 获取完整的订单数据（包含产品列表）
-          const orderData = await listWithProducts({ demandId });
-          response.value = orderData;
+          await getOrderData();
         }
-        
-        
       }
       
     } catch (parseError) {
@@ -150,6 +143,15 @@ const sendMessage = async () => {
     loading.value = false
   }
 }
+
+// 获取完整的订单数据（包含产品列表）
+const getOrderData = async () => {
+  const responseData = await listWithProducts();
+  orderData.value = responseData.rows || [];
+}
+
+getOrderData();
+
 
 // 清空消息
 const clearMessage = () => {

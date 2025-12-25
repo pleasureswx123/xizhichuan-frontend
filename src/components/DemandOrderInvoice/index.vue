@@ -11,31 +11,31 @@
       <div class="info-row">
         <div class="info-item">
           <span class="label">单据日期：</span>
-          <span class="value">{{ formatDate(orderData?.demandInfo?.createTime) }}</span>
+          <span class="value">{{ formatDate(orderData?.createTime) }}</span>
         </div>
         <div class="info-item">
           <span class="label">订单编号：</span>
-          <span class="value">{{ orderData?.demandInfo?.demandNo }}</span>
+          <span class="value">{{ orderData?.demandNo }}</span>
         </div>
         <div class="info-item">
           <span class="label">客户名称：</span>
-          <span class="value">{{ orderData?.demandInfo?.customerName }}</span>
+          <span class="value">{{ orderData?.customerName }}</span>
         </div>
       </div>
       <div class="info-row">
         <div class="info-item">
           <span class="label">联系人：</span>
-          <span class="value">{{ orderData?.demandInfo?.contactName }}</span>
+          <span class="value">{{ orderData?.contactName }}</span>
         </div>
         <div class="info-item">
           <span class="label">联系电话：</span>
-          <span class="value">{{ orderData?.demandInfo?.contactPhone }}</span>
+          <span class="value">{{ orderData?.contactPhone }}</span>
         </div>
       </div>
       <div class="info-row full-width">
         <div class="info-item">
           <span class="label">收货地址：</span>
-          <span class="value">{{ orderData?.demandInfo?.deliveryAddress }}</span>
+          <span class="value">{{ orderData?.deliveryAddress }}</span>
         </div>
       </div>
     </div>
@@ -83,7 +83,7 @@
       <div class="footer-row">
         <div class="footer-item">
           <span class="label">计划发货日期：</span>
-          <span class="value highlight">{{ orderData?.demandInfo?.planDeliveryDate }}</span>
+          <span class="value highlight">{{ orderData?.planDeliveryDate }}</span>
         </div>
         <div class="footer-item" style="margin-left: auto">
           <span class="label">其他费用：</span>
