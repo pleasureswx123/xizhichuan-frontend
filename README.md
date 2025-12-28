@@ -1,107 +1,306 @@
+<h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">西之川智能管理系统</h1>
+<h4 align="center">基于 RuoYi-Vue3 的企业级智能管理平台</h4>
+
 <p align="center">
-	<img alt="logo" src="https://oscimg.oschina.net/oscnet/up-d3d0a9303e11d522a06cd263f3079027715.png">
-</p>
-<h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">RuoYi v3.8.7</h1>
-<h4 align="center">基于SpringBoot+Vue3前后端分离的Java快速开发框架</h4>
-<p align="center">
-	<a href="https://gitee.com/y_project/RuoYi-Vue/stargazers"><img src="https://gitee.com/y_project/RuoYi-Vue/badge/star.svg?theme=dark"></a>
-	<a href="https://gitee.com/y_project/RuoYi-Vue"><img src="https://img.shields.io/badge/RuoYi-v3.8.7-brightgreen.svg"></a>
-	<a href="https://gitee.com/y_project/RuoYi-Vue/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg"></a>
+  <img src="https://img.shields.io/badge/Vue-3.4.0-brightgreen.svg" alt="Vue">
+  <img src="https://img.shields.io/badge/Element%20Plus-2.4.3-blue.svg" alt="Element Plus">
+  <img src="https://img.shields.io/badge/Vite-5.0.4-purple.svg" alt="Vite">
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
 </p>
 
-## 平台简介
+## 📋 项目简介
 
-* 本仓库为前端技术栈 [Vue3](https://v3.cn.vuejs.org) + [Element Plus](https://element-plus.org/zh-CN) + [Vite](https://cn.vitejs.dev) 版本。
-* 配套后端代码仓库地址[RuoYi-Vue](https://gitee.com/y_project/RuoYi-Vue) 或 [RuoYi-Vue-fast](https://github.com/yangzongzhuan/RuoYi-Vue-fast) 版本。
-* 前端技术栈（[Vue2](https://cn.vuejs.org) + [Element](https://github.com/ElemeFE/element) + [Vue CLI](https://cli.vuejs.org/zh)），请移步[RuoYi-Vue](https://gitee.com/y_project/RuoYi-Vue/tree/master/ruoyi-ui)。
-* 阿里云折扣场：[点我进入](http://aly.ruoyi.vip)，腾讯云秒杀场：[点我进入](http://txy.ruoyi.vip)&nbsp;&nbsp;
-* 阿里云优惠券：[点我领取](https://www.aliyun.com/minisite/goods?userCode=brki8iof&share_source=copy_link)，腾讯云优惠券：[点我领取](https://cloud.tencent.com/redirect.php?redirect=1025&cps_key=198c8df2ed259157187173bc7f4f32fd&from=console)&nbsp;&nbsp;
+西之川智能管理系统是基于 RuoYi-Vue3 框架开发的企业级管理平台，专注于考勤管理、需求分析和智能决策支持。系统采用前后端分离架构，提供现代化的用户界面和强大的业务功能。
 
-## 前端运行
+### 技术栈
+
+- **前端框架**: Vue 3.4.0 + Composition API
+- **UI 组件库**: Element Plus 2.4.3
+- **构建工具**: Vite 5.0.4
+- **状态管理**: Pinia 2.1.7
+- **路由管理**: Vue Router 4.2.5
+- **HTTP 客户端**: Axios 0.27.2
+- **图表库**: ECharts 5.4.3
+- **包管理器**: pnpm
+
+## 🚀 快速开始
+
+### 环境要求
+
+- Node.js >= 16.0.0
+- pnpm >= 8.0.0
+
+### 安装依赖
 
 ```bash
-# 克隆项目
-git clone https://gitee.com/ys-gitee/RuoYi-Vue3.git
+# 使用 pnpm 安装依赖（推荐）
+pnpm install
 
-# 进入项目目录
-cd RuoYi-Vue3
-
-# 安装依赖
+# 或使用 npm
 npm install --registry=https://registry.npmmirror.com
-
-# 本地开发 启动项目
-npm run dev
-
-# 前端访问地址 http://localhost:80
 ```
 
-## 内置功能
+### 开发运行
 
-1.  用户管理：用户是系统操作者，该功能主要完成系统用户配置。
-2.  部门管理：配置系统组织机构（公司、部门、小组），树结构展现支持数据权限。
-3.  岗位管理：配置系统用户所属担任职务。
-4.  菜单管理：配置系统菜单，操作权限，按钮权限标识等。
-5.  角色管理：角色菜单权限分配、设置角色按机构进行数据范围权限划分。
-6.  字典管理：对系统中经常使用的一些较为固定的数据进行维护。
-7.  参数管理：对系统动态配置常用参数。
-8.  通知公告：系统通知公告信息发布维护。
-9.  操作日志：系统正常操作日志记录和查询；系统异常信息日志记录和查询。
-10. 登录日志：系统登录日志记录查询包含登录异常。
-11. 在线用户：当前系统中活跃用户状态监控。
-12. 定时任务：在线（添加、修改、删除)任务调度包含执行结果日志。
-13. 代码生成：前后端代码的生成（java、html、xml、sql）支持CRUD下载 。
-14. 系统接口：根据业务代码自动生成相关的api接口文档。
-15. 服务监控：监视当前系统CPU、内存、磁盘、堆栈等相关信息。
-16. 缓存监控：对系统的缓存信息查询，命令统计等。
-17. 在线构建器：拖动表单元素生成相应的HTML代码。
-18. 连接池监视：监视当前系统数据库连接池状态，可进行分析SQL找出系统性能瓶颈。
+```bash
+# 启动开发服务器
+pnpm dev
 
-## 在线体验
+# 访问地址
+http://localhost:80
+```
 
-- admin/admin123  
-- 陆陆续续收到一些打赏，为了更好的体验已用于演示服务器升级。谢谢各位小伙伴。
+### 生产构建
 
-演示地址：http://vue.ruoyi.vip  
-文档地址：http://doc.ruoyi.vip
+```bash
+# 构建生产环境
+pnpm build:prod
 
-## 演示图
+# 构建预发布环境
+pnpm build:stage
 
-<table>
-    <tr>
-        <td><img src="https://oscimg.oschina.net/oscnet/cd1f90be5f2684f4560c9519c0f2a232ee8.jpg"/></td>
-        <td><img src="https://oscimg.oschina.net/oscnet/1cbcf0e6f257c7d3a063c0e3f2ff989e4b3.jpg"/></td>
-    </tr>
-    <tr>
-        <td><img src="https://oscimg.oschina.net/oscnet/up-8074972883b5ba0622e13246738ebba237a.png"/></td>
-        <td><img src="https://oscimg.oschina.net/oscnet/up-9f88719cdfca9af2e58b352a20e23d43b12.png"/></td>
-    </tr>
-    <tr>
-        <td><img src="https://oscimg.oschina.net/oscnet/up-39bf2584ec3a529b0d5a3b70d15c9b37646.png"/></td>
-        <td><img src="https://oscimg.oschina.net/oscnet/up-936ec82d1f4872e1bc980927654b6007307.png"/></td>
-    </tr>
-	<tr>
-        <td><img src="https://oscimg.oschina.net/oscnet/up-b2d62ceb95d2dd9b3fbe157bb70d26001e9.png"/></td>
-        <td><img src="https://oscimg.oschina.net/oscnet/up-d67451d308b7a79ad6819723396f7c3d77a.png"/></td>
-    </tr>	 
-    <tr>
-        <td><img src="https://oscimg.oschina.net/oscnet/5e8c387724954459291aafd5eb52b456f53.jpg"/></td>
-        <td><img src="https://oscimg.oschina.net/oscnet/644e78da53c2e92a95dfda4f76e6d117c4b.jpg"/></td>
-    </tr>
-	<tr>
-        <td><img src="https://oscimg.oschina.net/oscnet/up-8370a0d02977eebf6dbf854c8450293c937.png"/></td>
-        <td><img src="https://oscimg.oschina.net/oscnet/up-49003ed83f60f633e7153609a53a2b644f7.png"/></td>
-    </tr>
-	<tr>
-        <td><img src="https://oscimg.oschina.net/oscnet/up-d4fe726319ece268d4746602c39cffc0621.png"/></td>
-        <td><img src="https://oscimg.oschina.net/oscnet/up-c195234bbcd30be6927f037a6755e6ab69c.png"/></td>
-    </tr>
-    <tr>
-        <td><img src="https://oscimg.oschina.net/oscnet/b6115bc8c31de52951982e509930b20684a.jpg"/></td>
-        <td><img src="https://oscimg.oschina.net/oscnet/up-5e4daac0bb59612c5038448acbcef235e3a.png"/></td>
-    </tr>
-</table>
+# 预览构建结果
+pnpm preview
+```
 
+## ✨ 核心功能
 
-## 若依前后端分离交流群
+### 📊 考勤管理模块
 
-QQ群： [![加入QQ群](https://img.shields.io/badge/已满-937441-blue.svg)](https://jq.qq.com/?_wv=1027&k=5bVB1og) [![加入QQ群](https://img.shields.io/badge/已满-887144332-blue.svg)](https://jq.qq.com/?_wv=1027&k=5eiA4DH) [![加入QQ群](https://img.shields.io/badge/已满-180251782-blue.svg)](https://jq.qq.com/?_wv=1027&k=5AxMKlC) [![加入QQ群](https://img.shields.io/badge/已满-104180207-blue.svg)](https://jq.qq.com/?_wv=1027&k=51G72yr) [![加入QQ群](https://img.shields.io/badge/已满-186866453-blue.svg)](https://jq.qq.com/?_wv=1027&k=VvjN2nvu) [![加入QQ群](https://img.shields.io/badge/已满-201396349-blue.svg)](https://jq.qq.com/?_wv=1027&k=5vYAqA05) [![加入QQ群](https://img.shields.io/badge/已满-101456076-blue.svg)](https://jq.qq.com/?_wv=1027&k=kOIINEb5) [![加入QQ群](https://img.shields.io/badge/已满-101539465-blue.svg)](https://jq.qq.com/?_wv=1027&k=UKtX5jhs) [![加入QQ群](https://img.shields.io/badge/已满-264312783-blue.svg)](https://jq.qq.com/?_wv=1027&k=EI9an8lJ) [![加入QQ群](https://img.shields.io/badge/已满-167385320-blue.svg)](https://jq.qq.com/?_wv=1027&k=SWCtLnMz) [![加入QQ群](https://img.shields.io/badge/已满-104748341-blue.svg)](https://jq.qq.com/?_wv=1027&k=96Dkdq0k) [![加入QQ群](https://img.shields.io/badge/已满-160110482-blue.svg)](https://jq.qq.com/?_wv=1027&k=0fsNiYZt) [![加入QQ群](https://img.shields.io/badge/已满-170801498-blue.svg)](https://jq.qq.com/?_wv=1027&k=7xw4xUG1) [![加入QQ群](https://img.shields.io/badge/已满-108482800-blue.svg)](https://jq.qq.com/?_wv=1027&k=eCx8eyoJ) [![加入QQ群](https://img.shields.io/badge/已满-101046199-blue.svg)](https://jq.qq.com/?_wv=1027&k=SpyH2875) [![加入QQ群](https://img.shields.io/badge/已满-136919097-blue.svg)](https://jq.qq.com/?_wv=1027&k=tKEt51dz) [![加入QQ群](https://img.shields.io/badge/已满-143961921-blue.svg)](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=0vBbSb0ztbBgVtn3kJS-Q4HUNYwip89G&authKey=8irq5PhutrZmWIvsUsklBxhj57l%2F1nOZqjzigkXZVoZE451GG4JHPOqW7AW6cf0T&noverify=0&group_code=143961921) [![加入QQ群](https://img.shields.io/badge/已满-174951577-blue.svg)](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=ZFAPAbp09S2ltvwrJzp7wGlbopsc0rwi&authKey=HB2cxpxP2yspk%2Bo3WKTBfktRCccVkU26cgi5B16u0KcAYrVu7sBaE7XSEqmMdFQp&noverify=0&group_code=174951577) [![加入QQ群](https://img.shields.io/badge/161281055-blue.svg)](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=Fn2aF5IHpwsy8j6VlalNJK6qbwFLFHat&authKey=uyIT%2B97x2AXj3odyXpsSpVaPMC%2Bidw0LxG5MAtEqlrcBcWJUA%2FeS43rsF1Tg7IRJ&noverify=0&group_code=161281055) 点击按钮入群。
+#### 班组配置
+- **班组管理**: 配置和管理生产班组信息
+  - 班组名称、班长姓名
+  - 班组固定编制（产线编制）
+  - 班组状态管理
+  - 支持批量操作和数据导出
+
+#### 每日考勤
+- **考勤记录**: 树形结构展示每日考勤数据
+  - 按日期分组，展开显示各班组详情
+  - 支持多班组同时管理
+
+- **智能计算**: 自动计算考勤指标
+  - 实出勤人数 = 应出勤人数 - 请假人数 - 工伤人数
+  - 出勤率 = (实出勤人数 / 应出勤人数) × 100%
+  - 人员缺口 = 产线编制 - 应出勤人数
+
+- **可视化反显**: 异常数据智能高亮
+  - 🔴 紧急程度 > 0：红色背景提醒
+  - 🟡 人员缺口 > 0：黄色背景警告
+  - 星级评分显示紧急程度（1-5星）
+  - 班次字典化显示
+
+- **便捷操作**
+  - 新增考勤时自动关联所有班组
+  - 选择班组自动填充班长和编制信息
+  - 支持批量编辑和导出
+
+### 📝 需求管理模块
+
+#### 需求订单
+- **订单管理**: 客户需求订单的全生命周期管理
+  - 需求日期、需求编号
+  - 客户信息（名称、联系人、联系电话）
+  - 交付地址、计划交付日期
+
+#### 商品管理
+- **产品配置**: 订单商品明细管理
+  - 商品名称、规格、单位
+  - 数量、单价、金额
+  - 自动计算金额
+
+### 🤖 智能分析模块
+
+- **需求分析**: AI 驱动的智能需求分析
+  - 自然语言处理客户需求
+  - 自动生成初步销售订单
+  - 订单数据可视化展示
+
+### 🔧 系统管理模块
+
+#### 用户权限
+- 用户管理：系统用户配置和权限分配
+- 部门管理：组织机构树形结构管理
+- 岗位管理：用户岗位职务配置
+- 菜单管理：系统菜单和按钮权限配置
+- 角色管理：角色权限和数据范围划分
+
+#### 系统配置
+- 字典管理：系统固定数据维护（如班次类型）
+- 参数管理：系统动态参数配置
+- 通知公告：系统公告信息发布
+
+#### 系统监控
+- 操作日志：系统操作记录和异常日志
+- 登录日志：用户登录记录和异常监控
+- 在线用户：活跃用户状态监控
+- 定时任务：任务调度和执行日志
+- 服务监控：CPU、内存、磁盘等系统资源监控
+- 缓存监控：缓存信息查询和命令统计
+
+#### 开发工具
+- 代码生成：前后端代码自动生成（支持 CRUD）
+- 系统接口：API 接口文档自动生成
+- 在线构建器：拖拽式表单生成器
+
+## 📁 项目结构
+
+```
+xizhichuan-frontend/
+├── public/                 # 静态资源
+├── src/
+│   ├── api/               # API 接口
+│   │   ├── attendance/    # 考勤模块接口
+│   │   │   ├── group.js   # 班组管理
+│   │   │   └── main.js    # 考勤记录
+│   │   ├── demand/        # 需求模块接口
+│   │   │   ├── demand.js  # 需求订单
+│   │   │   └── product.js # 商品管理
+│   │   ├── system/        # 系统模块接口
+│   │   └── monitor/       # 监控模块接口
+│   ├── assets/            # 资源文件
+│   ├── components/        # 公共组件
+│   ├── directive/         # 自定义指令
+│   ├── layout/            # 布局组件
+│   ├── plugins/           # 插件
+│   ├── router/            # 路由配置
+│   ├── store/             # Pinia 状态管理
+│   ├── utils/             # 工具函数
+│   ├── views/             # 页面视图
+│   │   ├── attendance/    # 考勤管理
+│   │   │   ├── group/     # 班组配置
+│   │   │   └── main/      # 每日考勤
+│   │   ├── demand/        # 需求管理
+│   │   │   ├── demand/    # 需求订单
+│   │   │   └── product/   # 商品管理
+│   │   ├── analysis/      # 智能分析
+│   │   ├── system/        # 系统管理
+│   │   └── monitor/       # 系统监控
+│   ├── App.vue            # 根组件
+│   ├── main.js            # 入口文件
+│   └── permission.js      # 权限控制
+├── vite/                  # Vite 配置
+├── .env.development       # 开发环境变量
+├── .env.production        # 生产环境变量
+├── vite.config.js         # Vite 配置文件
+├── package.json           # 项目依赖
+└── README.md              # 项目说明
+```
+
+## 🔑 核心特性
+
+### 1. 智能反显系统
+考勤管理模块实现了智能数据反显功能，通过颜色编码快速识别异常情况：
+- 紧急情况（红色）：需要立即处理的班组
+- 人员不足（黄色）：需要关注的人员缺口
+
+### 2. 自动计算引擎
+考勤数据自动计算，减少人工错误：
+- 实时计算出勤率
+- 自动统计人员缺口
+- 动态更新考勤指标
+
+### 3. 树形数据展示
+采用树形结构展示考勤数据，层次清晰：
+- 父节点：考勤日期
+- 子节点：各班组详细数据
+- 支持展开/折叠操作
+
+### 4. 智能关联填充
+新增考勤时自动关联所有班组，提高录入效率：
+- 自动加载班组列表
+- 自动填充班组信息
+- 智能补充缺失数据
+
+## 🛠️ 开发指南
+
+### 代码规范
+
+- 使用 Vue 3 Composition API
+- 遵循 ESLint 代码规范
+- 组件命名采用 PascalCase
+- 文件命名采用 kebab-case
+
+### API 调用示例
+
+```javascript
+// 查询考勤列表
+import { listMain } from '@/api/attendance/main'
+
+async function getList() {
+  const response = await listMain(queryParams.value)
+  mainList.value = response.rows
+  total.value = response.total
+}
+```
+
+### 组件开发示例
+
+```vue
+<script setup name="ComponentName">
+import { ref, reactive } from 'vue'
+
+const loading = ref(false)
+const data = reactive({
+  list: [],
+  total: 0
+})
+
+// 业务逻辑
+</script>
+```
+
+## 📝 配置说明
+
+### 环境变量
+
+开发环境 (`.env.development`):
+```env
+VITE_APP_ENV = 'development'
+VITE_APP_BASE_API = '/dev-api'
+```
+
+生产环境 (`.env.production`):
+```env
+VITE_APP_ENV = 'production'
+VITE_APP_BASE_API = '/prod-api'
+```
+
+### 代理配置
+
+在 `vite.config.js` 中配置开发服务器代理：
+
+```javascript
+server: {
+  port: 80,
+  proxy: {
+    '/dev-api': {
+      target: 'http://localhost:8080',
+      changeOrigin: true,
+      rewrite: (p) => p.replace(/^\/dev-api/, '')
+    }
+  }
+}
+```
+
+## 🤝 贡献指南
+
+欢迎提交 Issue 和 Pull Request！
+
+1. Fork 本仓库
+2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 提交 Pull Request
+
+## 📄 开源协议
+
+本项目基于 [MIT](LICENSE) 协议开源
+
+## 🙏 致谢
+
+本项目基于 [RuoYi-Vue3](https://gitee.com/y_project/RuoYi-Vue) 框架开发，感谢若依团队的开源贡献！
+
+---
+
+<p align="center">Made with ❤️ by 西之川团队</p>
