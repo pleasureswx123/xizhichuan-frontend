@@ -1,44 +1,44 @@
 import request from '@/utils/request'
 
-// 查询购物车订单主列表
+// 查询每日考勤主列表
 export function listMain(query) {
   return request({
-    url: '/order/main/list',
+    url: '/attendance/main/list',
     method: 'get',
     params: query
   })
 }
 
-// 查询购物车订单主详细
-export function getMain(id) {
+// 查询每日考勤主详细
+export function getMain(mainId) {
   return request({
-    url: '/order/main/' + id,
+    url: '/attendance/main/' + mainId,
     method: 'get'
   })
 }
 
-// 新增购物车订单主
+// 新增每日考勤主
 export function addMain(data) {
   return request({
-    url: '/order/main',
+    url: '/attendance/main',
     method: 'post',
     data: data
   })
 }
 
-// 修改购物车订单主
+// 修改每日考勤主
 export function updateMain(data) {
   return request({
-    url: '/order/main',
+    url: '/attendance/main',
     method: 'put',
     data: data
   })
 }
 
-// 删除购物车订单主
-export function delMain(id) {
+// 删除每日考勤主
+export function delMain(mainId) {
   return request({
-    url: '/order/main/' + id,
+    url: '/attendance/main/' + mainId,
     method: 'delete'
   })
 }
